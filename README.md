@@ -18,7 +18,10 @@ Das neuronale Netz soll auf Tensorflow und den MNIST-Datensatz beruhen.
 Das Netz muss trainiert werden und das abgespeicherte Netz dann für die laufende Anwendung verwendet werden.
 
 ### GUI
---TODO--
+Die GUI wird mithilfe von Django gefertigt.
+> Django ist ein Framework für Python mithilfe dessen man einen Webserver man erstellen kann.
+
+Hier soll dann einfach per api request ein Bild predicted werden.
 
 ## Aufgabe
 Folgende Anforderungen sind in diesem Projekt zu lösen (Auswahl):
