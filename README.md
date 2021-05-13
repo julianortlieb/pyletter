@@ -26,3 +26,9 @@ Folgende Anforderungen sind in diesem Projekt zu lösen (Auswahl):
 - Implementierung in Java (mit deepLearning4Java) oder Python (z.B., via keras oder einem anderen geeigneten Package)
 - Aufbau einer Test- und Trainingsmenge für die Modellierung und dessen Evaluation,
 - Implementierung eines GUI zur Eingabe handschriftlicher Ziffern und gleichzeitig die Ausgabe der erkannten und konvertierten Ziffer in Form von Maschinentext.
+
+## Starten des Webservers
+``` bash
+cd src/
+python manage.py runserver
+```
