@@ -22,7 +22,7 @@ Das Netz muss trainiert werden und das abgespeicherte Netz dann für die laufend
 
 ## Aufgabe
 Folgende Anforderungen sind in diesem Projekt zu lösen (Auswahl):
-- TheorieteilzurKlassifikationbzw.ErkennunghandschriftlicherZeichen,
-- ImplementierunginJava(mitdeepLearning4Java)oderPython(z.B.,viakerasodereinemanderengeeignetenPackage)
-- AufbaueinerTest-undTrainingsmengefürdieModellierungunddessenEvaluation,
+- Theorieteil zur Klassifikation bzw. Erkennung handschriftlicher Zeichen,
+- Implementierung in Java (mit deepLearning4Java) oder Python (z.B., via keras oder einem anderen geeigneten Package)
+- Aufbau einer Test- und Trainingsmenge für die Modellierung und dessen Evaluation,
 - Implementierung eines GUI zur Eingabe handschriftlicher Ziffern und gleichzeitig die Ausgabe der erkannten und konvertierten Ziffer in Form von Maschinentext.
