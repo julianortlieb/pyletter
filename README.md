@@ -1,4 +1,4 @@
-# pyletter
+# PyLetter
 <img src="https://upload.wikimedia.org/wikipedia/de/thumb/1/1d/DHBW-Logo.svg/2880px-DHBW-Logo.svg.png" alt="drawing" width="200"/>
 
 Ein Projekt für das Fach "Einführung in die künstliche Intelligenz" an der DHBW Lörrach.
