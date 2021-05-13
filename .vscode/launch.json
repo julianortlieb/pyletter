@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:8000",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch Webserver",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\src\\manage.py",
+            "args": ["runserver"]
+        }
+    ]
+}

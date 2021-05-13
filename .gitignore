@@ -132,4 +132,4 @@ dmypy.json
 db.sqlite3
 
 # visual studio
-.vscode
+settings.json
