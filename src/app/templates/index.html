@@ -16,14 +16,17 @@
                         <canvas id="drawArea" height="400px" width="400px">
 
                         </canvas>
-                        <button onclick="clearArea()">Clear</button>
+                        <div>
+                            <button onclick="clearArea()">Clear</button>
+                            <button onclick="predict()">Predict</button>
+                        </div>
                     </div>
                 </div>
                 <!-- Ausgabe -->
                 <div class="container">
                     <h2>Ausgabe</h2>
                     <div>
-                        <span class="letter">5</span>
+                        <span id="letter" class="letter">...</span>
                     </div>
                 </div>
             </div>
