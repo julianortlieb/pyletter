@@ -17,10 +17,12 @@ function initCanvas() {
 
     document.getElementById("drawArea").addEventListener('mouseup', function (e) {
         mousePressed = false;
+        predict();
     });
 
     document.getElementById("drawArea").addEventListener('mouseleave', function (e) {
         mousePressed = false;
+        predict();
     });
 
     ctx.fillStyle = "white";
