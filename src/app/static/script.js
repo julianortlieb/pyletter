@@ -22,6 +22,9 @@ function initCanvas() {
     document.getElementById("drawArea").addEventListener('mouseleave', function (e) {
         mousePressed = false;
     });
+
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, document.getElementById("drawArea").width, document.getElementById("drawArea").height);
 }
 
 function Draw(x, y, isDown) {
@@ -41,6 +44,8 @@ function Draw(x, y, isDown) {
 function clearArea() {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, document.getElementById("drawArea").width, document.getElementById("drawArea").height);
 }
 
 function convertToImage() {
