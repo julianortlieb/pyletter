@@ -33,7 +33,7 @@ function Draw(x, y, isDown) {
     if (isDown) {
         ctx.beginPath();
         ctx.strokeStyle = "black";
-        ctx.lineWidth = 18;
+        ctx.lineWidth = 25;
         ctx.lineJoin = "round";
         ctx.moveTo(lastX, lastY);
         ctx.lineTo(x, y);
