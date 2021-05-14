@@ -21,8 +21,9 @@ function initCanvas() {
     });
 
     document.getElementById("drawArea").addEventListener('mouseleave', function (e) {
+        if(mousePressed)
+            predict();
         mousePressed = false;
-        predict();
     });
 
     ctx.fillStyle = "white";
