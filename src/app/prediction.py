@@ -18,10 +18,10 @@ def trainModel():
         tf.keras.layers.Dense(10, activation=tf.nn.softmax)
     ])
     # compile
-    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.001), loss='sparse_categorical_crossentropy', metrics=['accuracy'], )
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0005), loss='sparse_categorical_crossentropy', metrics=['accuracy'], )
 
     # Feed the model
-    model.fit(train_images, train_labels, epochs=10)
+    model.fit(train_images, train_labels, epochs=20)
     model.save(os.path.join(Path(__file__).resolve().parent, 'model'))
 
 def predict(image):
