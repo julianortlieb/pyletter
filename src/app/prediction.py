@@ -15,7 +15,7 @@ def predict(image):
     img = ImageOps.invert(img)
     img_array = np.array(img)
     img_array = np.asarray([img_array])
-    img_array = tf.reshape(img_array, [-1, 28, 28, 1])
+    img_array = tf.reshape(img_array, [-1, 28, 28, 1]) # für erweitertes model
     predict = model.predict(img_array)
     print('PREDICT', np.argmax(predict[0]))
 
