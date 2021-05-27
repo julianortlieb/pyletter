@@ -35,3 +35,6 @@ Folgende Anforderungen sind in diesem Projekt zu lösen (Auswahl):
 cd src/
 python manage.py runserver
 ```
+
+## Trainieren
+Zum Trainieren siehe Ordner ```src/trainApp``` .
