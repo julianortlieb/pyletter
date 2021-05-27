@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+from urllib.request import ProxyDigestAuthHandler
 
 import tensorflow as tf
 import numpy as np
@@ -19,4 +20,19 @@ def predict(image):
     predict = model.predict(img_array)
     print('PREDICT', np.argmax(predict[0]))
 
-    return np.argmax(predict[0])
+    print([np.argmax(predict[0]), predict[0]])
+    # return np.argmax(predict[0])
+
+    return ('{',
+                '"value": "',np.argmax(predict[0]),'",',
+                '"zero": "',predict[0][0],'",'
+                '"one": "',predict[0][1],'",',
+                '"two": "',predict[0][2],'",',
+                '"three": "',predict[0][3],'",',
+                '"four": "',predict[0][4],'",',
+                '"five": "',predict[0][5],'",',
+                '"six": "',predict[0][6],'",',
+                '"seven": "',predict[0][7],'",',
+                '"eight": "',predict[0][8],'",',
+                '"nine": "',predict[0][9],'"',
+            '}')
