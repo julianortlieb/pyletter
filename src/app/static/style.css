@@ -92,3 +92,14 @@ footer {
     background: #ffffff38; 
     backdrop-filter: blur(10px);
 }
+
+.percent-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.percent-container > div {
+    display: flex;
+    flex-direction: column;
+}

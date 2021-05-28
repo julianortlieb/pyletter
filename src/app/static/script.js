@@ -110,32 +110,26 @@ function predict() {
 
             document.getElementById("letter").innerText = prediction.value;
 
-            var propabilitiesStringLower = "";
-            var propabilitiesStringUppper = "";
-            propabilitiesStringLower += "0: " + Math.round(parseFloat(prediction.zero)*10000)/100 + "% | ";
-            propabilitiesStringLower += "1: " + Math.round(parseFloat(prediction.one)*10000)/100 + "% | ";
-            propabilitiesStringLower += "2: " + Math.round(parseFloat(prediction.two)*10000)/100+ "% | ";
-            propabilitiesStringLower += "3: " + Math.round(parseFloat(prediction.three)*10000)/100 + "% | ";
-            propabilitiesStringLower += "4: " + Math.round(parseFloat(prediction.four)*10000)/100 + "%";
-
-            propabilitiesStringUppper += "5: " + Math.round(parseFloat(prediction.five)*10000)/100 + "% | ";
-            propabilitiesStringUppper += "6: " + Math.round(parseFloat(prediction.six)*10000)/100 + "% | ";
-            propabilitiesStringUppper += "7: " + Math.round(parseFloat(prediction.seven)*10000)/100 + "% | ";
-            propabilitiesStringUppper += "8: " + Math.round(parseFloat(prediction.eight)*10000)/100 + "% | ";
-            propabilitiesStringUppper += "9: " + Math.round(parseFloat(prediction.nine)*10000)/100 + "%";
-
-            console.log("lower: " + propabilitiesStringLower);
-            console.log("upper: " + propabilitiesStringUppper);
-
-            document.getElementById("propabilities-lower").innerText = propabilitiesStringLower;    
-            document.getElementById("propabilities-upper").innerText = propabilitiesStringUppper;
-
+            document.getElementById("percent-0").innerText = parsePercentage(prediction.zero);
+            document.getElementById("percent-1").innerText = parsePercentage(prediction.one);
+            document.getElementById("percent-2").innerText = parsePercentage(prediction.two);
+            document.getElementById("percent-3").innerText = parsePercentage(prediction.three);
+            document.getElementById("percent-4").innerText = parsePercentage(prediction.four);
+            document.getElementById("percent-5").innerText = parsePercentage(prediction.five);
+            document.getElementById("percent-6").innerText = parsePercentage(prediction.six);
+            document.getElementById("percent-7").innerText = parsePercentage(prediction.seven);
+            document.getElementById("percent-8").innerText = parsePercentage(prediction.eight);
+            document.getElementById("percent-9").innerText = parsePercentage(prediction.nine);
         } else {
             console.warn(request.statusText, request.responseText);
         }
     });
 
     request.send(convertToImage());
+}
+
+function parsePercentage(number) {
+    return Math.round(parseFloat(number)*10000)/100 + "%"
 }
 
 document.addEventListener('DOMContentLoaded', function () {

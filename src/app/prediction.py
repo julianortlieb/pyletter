@@ -20,7 +20,7 @@ def predict(image):
     predict = model.predict(img_array)
     print('PREDICT', np.argmax(predict[0]))
 
-    print([np.argmax(predict[0]), predict[0]])
+    #print([np.argmax(predict[0]), predict[0]])
     # return np.argmax(predict[0])
 
     return ('{',
