@@ -129,7 +129,7 @@ function predict() {
 }
 
 function parsePercentage(number) {
-    return Math.round(parseFloat(number)*10000)/100 + "%"
+    return (Math.round(parseFloat(number)*10000)/100 + "%").replace(".", ",");
 }
 
 document.addEventListener('DOMContentLoaded', function () {
