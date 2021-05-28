@@ -110,20 +110,26 @@ function predict() {
 
             document.getElementById("letter").innerText = prediction.value;
 
-            var propabilitiesString = "";
-            propabilitiesString += "0: " + Math.round(parseFloat(prediction.zero)*10000)/100 + "% | ";
-            propabilitiesString += "1: " + Math.round(parseFloat(prediction.one)*10000)/100 + "% | ";
-            propabilitiesString += "2: " + Math.round(parseFloat(prediction.two)*10000)/100+ "% | ";
-            propabilitiesString += "3: " + Math.round(parseFloat(prediction.three)*10000)/100 + "% | ";
-            propabilitiesString += "4: " + Math.round(parseFloat(prediction.four)*10000)/100 + "% | ";
-            propabilitiesString += "5: " + Math.round(parseFloat(prediction.five)*10000)/100 + "% | ";
-            propabilitiesString += "6: " + Math.round(parseFloat(prediction.six)*10000)/100 + "% | ";
-            propabilitiesString += "7: " + Math.round(parseFloat(prediction.seven)*10000)/100 + "% | ";
-            propabilitiesString += "8: " + Math.round(parseFloat(prediction.eight)*10000)/100 + "% | ";
-            propabilitiesString += "9: " + Math.round(parseFloat(prediction.nine)*10000)/100 + "%";
+            var propabilitiesStringLower = "";
+            var propabilitiesStringUppper = "";
+            propabilitiesStringLower += "0: " + Math.round(parseFloat(prediction.zero)*10000)/100 + "% | ";
+            propabilitiesStringLower += "1: " + Math.round(parseFloat(prediction.one)*10000)/100 + "% | ";
+            propabilitiesStringLower += "2: " + Math.round(parseFloat(prediction.two)*10000)/100+ "% | ";
+            propabilitiesStringLower += "3: " + Math.round(parseFloat(prediction.three)*10000)/100 + "% | ";
+            propabilitiesStringLower += "4: " + Math.round(parseFloat(prediction.four)*10000)/100 + "%";
 
-            console.log(propabilitiesString);
-            document.getElementById("propabilities").innerText = propabilitiesString;
+            propabilitiesStringUppper += "5: " + Math.round(parseFloat(prediction.five)*10000)/100 + "% | ";
+            propabilitiesStringUppper += "6: " + Math.round(parseFloat(prediction.six)*10000)/100 + "% | ";
+            propabilitiesStringUppper += "7: " + Math.round(parseFloat(prediction.seven)*10000)/100 + "% | ";
+            propabilitiesStringUppper += "8: " + Math.round(parseFloat(prediction.eight)*10000)/100 + "% | ";
+            propabilitiesStringUppper += "9: " + Math.round(parseFloat(prediction.nine)*10000)/100 + "%";
+
+            console.log("lower: " + propabilitiesStringLower);
+            console.log("upper: " + propabilitiesStringUppper);
+
+            document.getElementById("propabilities-lower").innerText = propabilitiesStringLower;    
+            document.getElementById("propabilities-upper").innerText = propabilitiesStringUppper;
+
         } else {
             console.warn(request.statusText, request.responseText);
         }
